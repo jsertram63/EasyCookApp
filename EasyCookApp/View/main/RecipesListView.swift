@@ -11,10 +11,9 @@ struct RecipesListView: View {
     
     @EnvironmentObject var recipesVM: RecipesViewModel
     
-    
-    
     // Initialisation d'une propriété d'état servant à présenter la vue UserModificationView
     @State private var showEditUserView: Bool = false
+    
     // Initialisation d'une propriété d'état servant à présenter la vue AddRecipeView
     @State private var showAddRecipeView: Bool = false
     
@@ -29,7 +28,7 @@ struct RecipesListView: View {
         NavigationView {
             ScrollView(showsIndicators: false) {
                 ForEach(recipesVM.categories.keys.sorted(), id: \.self) { key in
-                    CatgoryRowView(categoryName: key, recipes: recipesVM.categories[key]!)
+                    CategoryRowView(categoryName: key, recipes: recipesVM.categories[key]!)
                 }
             }
             // Permet l'affiche d'une vue en cascade
@@ -55,7 +54,7 @@ struct RecipesListView: View {
                             .frame(width: 25.0, height: 25.0)
                             .foregroundColor(Color.accentColor)
                             .frame(width: 35, height: 35)
-                            .fontWeight(.medium)
+                            .fontWeight(.semibold)
                     }
                 }
                 // item droit
@@ -69,14 +68,13 @@ struct RecipesListView: View {
                             .frame(width: 25.0, height: 25.0)
                             .foregroundColor(Color.accentColor)
                             .frame(width: 35, height: 35)
-                            .fontWeight(.medium)
+                            .fontWeight(.semibold)
                     }
                 }
             }
-            .background(Color.accentColor.opacity(0.25))
+            .background(Color.color1)
         }
         .onAppear {
-            UITabBar.appearance().backgroundColor = .systemGray5
             recipesVM.fetchRecipes()
         }
         

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CatgoryRowView: View {
+struct CategoryRowView: View {
     var categoryName: String
     var recipes: [RecipeModel]
     
@@ -15,31 +15,41 @@ struct CatgoryRowView: View {
         VStack(alignment: .leading) {
             Text(categoryName)
                 .font(Font.custom("Noteworthy", size: 20))
-                .fontWeight(.medium)
+                .fontWeight(.regular)
                 .foregroundColor(.accentColor)
             
             Divider()
+                .padding(.horizontal)
             
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(alignment: .center, spacing: 25.0) {
+                HStack(alignment: .center, spacing: 30.0) {
                     ForEach(recipes) { recipe in
                         NavigationLink {
                             RecipeDetailsView(recipe: recipe)
                         } label: {
-                            VStack(alignment: .center, spacing: 10.0) {
+                            VStack(alignment: .center, spacing: 15.0) {
                                 AsyncImage(url: URL(string: recipe.imageURL)) { image in
                                     image
                                         .resizable()
-                                        .frame(width: 150, height: 125)
+                                        .frame(width: 150, height: 105)
                                         .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
                                         .overlay {
                                             RoundedRectangle(cornerRadius: 15, style: .continuous)
-                                                .stroke(Color.brown, lineWidth: 10)
+                                                .stroke(Color.brown, lineWidth: 7)
                                         }
                                         .shadow(radius: 2)
                                     
                                 } placeholder: {
-                                    ProgressView()
+                                    Image(systemName: "photo")
+                                        .resizable()
+                                        .frame(width: 150, height: 105)
+                                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                                        .overlay {
+                                            RoundedRectangle(cornerRadius: 15, style: .continuous)
+                                                .stroke(Color.brown, lineWidth: 7)
+                                        }
+                                        .foregroundColor(Color.color2)
+                                        .shadow(radius: 2)
                                 }
                                 
                                 Text(recipe.name)
@@ -51,10 +61,9 @@ struct CatgoryRowView: View {
                         }
                     }
                 }
-                .padding(.leading)
+                .padding(.horizontal)
             }
         }
-        .padding([.top, .leading, .bottom])
-        .background(.thickMaterial)
+        .padding([.top, .leading])
     }
 }
