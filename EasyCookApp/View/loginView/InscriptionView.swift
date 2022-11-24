@@ -9,9 +9,9 @@ import SwiftUI
 
 struct InscriptionView: View {
     
+    @State var fullName = ""
     @State var userName = ""
     @State var password = ""
-    @State var fullName = ""
     
     var body: some View {
         ZStack {

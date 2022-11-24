@@ -21,7 +21,7 @@ struct LoginView: View {
     @State var password = ""
     
     var body: some View {
-        NavigationView{
+        NavigationView {
             ZStack {
                 Color.color1.ignoresSafeArea()
                 
@@ -54,6 +54,7 @@ struct LoginView: View {
                         HStack(alignment: .center) {
                             Button {
                                 print("connextion")
+                                dismiss()
                             } label: {
                                 Text("connexion")
                                     .fontWeight(.bold)

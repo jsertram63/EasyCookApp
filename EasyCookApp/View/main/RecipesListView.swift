@@ -77,8 +77,6 @@ struct RecipesListView: View {
         .onAppear {
             recipesVM.fetchRecipes()
         }
-        
-        
     }
 }
 
