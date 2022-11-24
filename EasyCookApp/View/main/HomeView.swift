@@ -52,7 +52,7 @@ struct HomeView: View {
                             .foregroundColor(.white)
                             .padding(5.0)
                     }
-                    .padding(.top)
+                    .padding(.vertical)
                     .buttonStyle(.borderedProminent)
                     .shadow(radius: 3)
                 }

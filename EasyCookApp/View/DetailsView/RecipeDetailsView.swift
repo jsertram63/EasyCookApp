@@ -18,9 +18,7 @@ struct RecipeDetailsView: View {
     
     var body: some View {
         ZStack {
-            Color.accentColor
-                .opacity(0.25)
-                .ignoresSafeArea()
+            Color.color1.ignoresSafeArea()
             
             ScrollView(showsIndicators: false) {
                 // Permet la réccupération d'une image via url
@@ -43,13 +41,13 @@ struct RecipeDetailsView: View {
                         }
                         .overlay(alignment: .topTrailing) {
                             Button {
-                                showEditRecipe = true
+                                showEditRecipe.toggle()
                             } label: {
                                 Image(systemName: "pencil")
                                     .font(.headline)
                                     .foregroundColor(.accentColor)
                                     .padding(5.0)
-                                    .background(.regularMaterial)
+                                    .background(Color.color2)
                                     .cornerRadius(10)
                                     .shadow(color: Color.black.opacity(0.5), radius: 3, x: 0, y: 0)
                                     .offset(x: -5,y: 5)
@@ -85,7 +83,7 @@ struct RecipeDetailsView: View {
                         .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                         // Modifyer prenant en paramètre la largeur où on définir le ratio
                         .frame(width: screenSize.width * 0.90)
-                        .background(.regularMaterial)
+                        .background(Color.color2)
                         .cornerRadius(15)
                         .shadow(color: .black.opacity(0.5), radius: 5, x: 0, y: 0)
                         
@@ -97,7 +95,7 @@ struct RecipeDetailsView: View {
                         }
                         .padding(.all)
                         .frame(width: screenSize.width * 0.90)
-                        .background(.regularMaterial)
+                        .background(Color.color2)
                         .cornerRadius(15)
                         .shadow(color: .black.opacity(0.5), radius: 5, x: 0, y: 0)
                         .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)

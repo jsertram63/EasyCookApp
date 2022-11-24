@@ -30,11 +30,6 @@ struct ContentView: View {
                     .tabItem {
                         Label("Ingrédients", systemImage: "cooktop.fill")
                     }
-                
-                PrivacyView()
-                    .tabItem {
-                        Label("Remerciements", systemImage: "lock.circle")
-                    }
             }
             .toolbar(.visible, for: .tabBar)
             .toolbarBackground(Color.color2, for: .tabBar)

@@ -47,7 +47,7 @@ struct RecipesListView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
                         // Le bouton passe le booléen à true
-                        showEditUserView = true
+                        showEditUserView.toggle()
                     } label: {
                         Image(systemName: "person.circle")
                             .resizable()
@@ -61,7 +61,7 @@ struct RecipesListView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         // Le bouton passe le booléen à true
-                        showAddRecipeView = true
+                        showAddRecipeView.toggle()
                     } label: {
                         Image(systemName: "plus.circle")
                             .resizable()
