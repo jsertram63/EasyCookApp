@@ -8,31 +8,38 @@
 import SwiftUI
 
 struct ContentView: View {
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor(Color.color2)
+    }
+    
     @EnvironmentObject var recipesVM:  RecipesViewModel
     
     var body: some View {
         TabView {
-            HomeView()
-                .tabItem {
-                    Label("Accueil",systemImage: "house")
-                }
-            
-            RecipesListView()
-                .tabItem {
-                    Label("Recette",systemImage: "text.book.closed")
-                }
-            IngredientsListView()
-                .tabItem{
-                    Label("Ingrédients", systemImage: "cooktop.fill")
-                }
-            
-            PrivacyView()
-                .tabItem{
-                    Label("Remerciements", systemImage: "lock.circle")
-                }
+            Group {
+                HomeView()
+                    .tabItem {
+                        Label("Accueil",systemImage: "house")
+                    }
+                
+                RecipesListView()
+                    .tabItem {
+                        Label("Recette",systemImage: "text.book.closed")
+                    }
+                IngredientsListView()
+                    .tabItem {
+                        Label("Ingrédients", systemImage: "cooktop.fill")
+                    }
+                
+                PrivacyView()
+                    .tabItem {
+                        Label("Remerciements", systemImage: "lock.circle")
+                    }
+            }
+            .toolbar(.visible, for: .tabBar)
+            .toolbarBackground(Color.color2, for: .tabBar)
         }
         .onAppear {
-            UITabBar.appearance().backgroundColor = .systemGray5
             recipesVM.fetchRecipes()
             recipesVM.fetchIngredients()
         }
