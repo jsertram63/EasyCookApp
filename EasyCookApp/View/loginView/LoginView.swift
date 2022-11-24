@@ -8,58 +8,93 @@
 import SwiftUI
 
 struct LoginView: View {
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [
+            .foregroundColor: UIColor.tintColor,
+            .font : UIFont(name:"Noteworthy", size: 35)!
+        ]
+    }
+    
+    @Environment(\.dismiss) var dismiss
+    
     @State var userName = ""
     @State var password = ""
+    
     var body: some View {
         NavigationView{
             ZStack {
-                Color.brown.opacity(0.25).ignoresSafeArea()
+                Color.color1.ignoresSafeArea()
+                
                 VStack {
                     VStack(alignment: .center, spacing: 15) {
-                        Text("Easy Cook App")
-                        TextField("Nom d'utilisateur", text:$userName)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .textInputAutocapitalization(.words)
-                            .padding(.horizontal)
-                        SecureField("Mot de passe", text:$password)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .padding(.horizontal)
+                        
+                        VStack(spacing: 25.0) {
+                            VStack(alignment: .leading, spacing: 5.0) {
+                                Text("Pseudo")
+                                    .foregroundColor(Color.accentColor)
+                                
+                                TextField("", text: $userName)
+                                    .padding(5.0)
+                                    .background(.white)
+                                    .foregroundColor(.black)
+                                    .textInputAutocapitalization(.words)
+                            }
+                            
+                            VStack(alignment: .leading, spacing: 5.0) {
+                                Text("Mot de passe")
+                                    .foregroundColor(Color.accentColor)
+                                
+                                SecureField("", text: $password)
+                                    .padding(5.0)
+                                    .background(.white)
+                                    .foregroundColor(.black)
+                            }
+                        }
+                        
                         HStack(alignment: .center) {
                             Button {
                                 print("connextion")
                             } label: {
                                 Text("connexion")
                                     .fontWeight(.bold)
-                                    .foregroundColor(.accentColor)
-                                    .padding()
-                                    .background(.thickMaterial)
-                                    .cornerRadius(15)
-                                    .shadow(radius: 5)
+                                    .foregroundColor(.white)
+                                    .padding(5.0)
                             }
+                            .buttonStyle(.borderedProminent)
+                            .shadow(radius: 3)
+                            
                             Spacer()
+                            
                             NavigationLink {
                                 InscriptionView()
                             } label: {
                                 Text("Inscription")
                                     .fontWeight(.bold)
-                                    .foregroundColor(.accentColor)
-                                    .padding()
-                                    .background(.thickMaterial)
-                                    .cornerRadius(15)
-                                    .shadow(radius: 5)
+                                    .foregroundColor(.white)
+                                    .padding(5.0)
                             }
-
+                            .buttonStyle(.borderedProminent)
+                            .shadow(radius: 3)
                         }
-
-                        
+                        .padding(.vertical)
                     }
-                    .padding()
-                    .background(.ultraThinMaterial).cornerRadius(15)
-                    .shadow(radius: 5)
-                 
                 }
-                .padding()
-                
+                .padding(.horizontal, 50.0)
+                .navigationTitle("Connexion")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            withAnimation {
+                                dismiss()
+                            }
+                        } label: {
+                            Image(systemName: "xmark.circle")
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                                .fontWeight(.bold)
+                        }
+                    }
+                }
             }
         }
     }
