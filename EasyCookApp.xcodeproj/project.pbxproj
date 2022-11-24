@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		37058E6528F2B2EC004CE470 /* EditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37058E6428F2B2EB004CE470 /* EditUserView.swift */; };
 		37058E6728F2B454004CE470 /* AddRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37058E6628F2B454004CE470 /* AddRecipeView.swift */; };
-		37058E6928F2BB82004CE470 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37058E6828F2BB82004CE470 /* LaunchScreen.storyboard */; };
 		37058E6B28F2C830004CE470 /* AddIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37058E6A28F2C830004CE470 /* AddIngredientView.swift */; };
 		37058E6D28F2C88D004CE470 /* EditIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37058E6C28F2C88D004CE470 /* EditIngredientView.swift */; };
 		37058E7328F2CEBA004CE470 /* EditRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37058E7228F2CEBA004CE470 /* EditRecipeView.swift */; };
 		3724F32A292F683900B1AEFD /* ColorExtensionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3724F329292F683900B1AEFD /* ColorExtensionModel.swift */; };
 		3754F7DE28FAAA210013429C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3754F7DD28FAAA210013429C /* HomeView.swift */; };
 		3754F7E028FAABC10013429C /* PrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3754F7DF28FAABC10013429C /* PrivacyView.swift */; };
+		377B5913292FAAD80021753B /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B5912292FAAD80021753B /* LaunchScreenView.swift */; };
 		37815C1328F31AC9009F4CE8 /* CategoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37815C1228F31AC9009F4CE8 /* CategoryRowView.swift */; };
 		37DCC2F628FBF13D00F5738B /* RecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DCC2F528FBF13D00F5738B /* RecipesViewModel.swift */; };
 		37F44D7128EFF54E003122FD /* RecipeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F44D7028EFF54E003122FD /* RecipeDetailsView.swift */; };
@@ -42,13 +42,13 @@
 /* Begin PBXFileReference section */
 		37058E6428F2B2EB004CE470 /* EditUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserView.swift; sourceTree = "<group>"; };
 		37058E6628F2B454004CE470 /* AddRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeView.swift; sourceTree = "<group>"; };
-		37058E6828F2BB82004CE470 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37058E6A28F2C830004CE470 /* AddIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientView.swift; sourceTree = "<group>"; };
 		37058E6C28F2C88D004CE470 /* EditIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIngredientView.swift; sourceTree = "<group>"; };
 		37058E7228F2CEBA004CE470 /* EditRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRecipeView.swift; sourceTree = "<group>"; };
 		3724F329292F683900B1AEFD /* ColorExtensionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensionModel.swift; sourceTree = "<group>"; };
 		3754F7DD28FAAA210013429C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3754F7DF28FAABC10013429C /* PrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyView.swift; sourceTree = "<group>"; };
+		377B5912292FAAD80021753B /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		37815C1228F31AC9009F4CE8 /* CategoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRowView.swift; sourceTree = "<group>"; };
 		37DCC2F528FBF13D00F5738B /* RecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewModel.swift; sourceTree = "<group>"; };
 		37F44D7028EFF54E003122FD /* RecipeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsView.swift; sourceTree = "<group>"; };
@@ -87,12 +87,12 @@
 		37058E6E28F2C97D004CE470 /* main */ = {
 			isa = PBXGroup;
 			children = (
-				37058E6828F2BB82004CE470 /* LaunchScreen.storyboard */,
 				89F60F7E28EB40C60045BE82 /* ContentView.swift */,
 				89F60F8B28EB41520045BE82 /* RecipesListView.swift */,
 				37F44D7228F00E80003122FD /* IngredientsListView.swift */,
 				3754F7DD28FAAA210013429C /* HomeView.swift */,
 				3754F7DF28FAABC10013429C /* PrivacyView.swift */,
+				377B5912292FAAD80021753B /* LaunchScreenView.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -275,7 +275,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37058E6928F2BB82004CE470 /* LaunchScreen.storyboard in Resources */,
 				89F60F8428EB40C80045BE82 /* Preview Assets.xcassets in Resources */,
 				89F60F8128EB40C80045BE82 /* Assets.xcassets in Resources */,
 			);
@@ -311,6 +310,7 @@
 				37815C1328F31AC9009F4CE8 /* CategoryRowView.swift in Sources */,
 				37DCC2F628FBF13D00F5738B /* RecipesViewModel.swift in Sources */,
 				899329D7290726A500BD5955 /* NewIngredient.swift in Sources */,
+				377B5913292FAAD80021753B /* LaunchScreenView.swift in Sources */,
 				89A0EC72291046A900CD0168 /* LoginViewModel.swift in Sources */,
 				37058E6728F2B454004CE470 /* AddRecipeView.swift in Sources */,
 				89A0EC6B29103B3D00CD0168 /* RefreshObject.swift in Sources */,
@@ -447,10 +447,9 @@
 				DEVELOPMENT_TEAM = SV32QZFP9X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -480,10 +479,9 @@
 				DEVELOPMENT_TEAM = SV32QZFP9X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;

@@ -11,7 +11,7 @@ import SwiftUI
 struct EasyCookAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LaunchScreenView()
                 .environmentObject(RecipesViewModel())
                 .environmentObject(CreateRecipeViewModel())
                 .environmentObject(CreateIngredientViewModel())
